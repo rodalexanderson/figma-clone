@@ -9,9 +9,11 @@ const client = createClient({
 
 // Funciones de resolución para el cliente
 client.resolveUsers = async ({ userIds }) => {
-  // Tu implementación para resolver usuarios
+  console.log("resolveUsers recibió los siguientes userIds:", userIds);
+
   return [];
 };
+
 
 client.resolveMentionSuggestions = async ({ text }) => {
   // Tu implementación para resolver menciones
@@ -85,4 +87,5 @@ export const {
     useRemoveReaction,
   },
 } = createRoomContext<Presence, Storage, UserMeta, RoomEvent, ThreadMetadata>(client);
+
 

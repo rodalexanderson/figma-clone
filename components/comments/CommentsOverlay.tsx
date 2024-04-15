@@ -27,7 +27,7 @@ export const CommentsOverlay = () => {
 
   return (
     <div>
-      {threads
+      {threads && threads
         .filter((thread) => !thread.metadata.resolved)
         .map((thread) => (
           <OverlayThread key={thread.id} thread={thread} maxZIndex={maxZIndex} />
@@ -50,6 +50,7 @@ const OverlayThread = ({ thread, maxZIndex }: OverlayThreadProps) => {
    *
    * useUser: https://liveblocks.io/docs/api-reference/liveblocks-react#useUser
    */
+  console.log(thread.comments[0].userId)
   const { isLoading } = useUser(thread.comments[0].userId);
 
   // We're using a ref to get the thread element to position it

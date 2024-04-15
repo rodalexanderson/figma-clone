@@ -269,7 +269,7 @@ const Live = ({ canvasRef, undo, redo }: Props) => {
         <LiveCursors others={others} />
 
         {/* Show the comments */}
-        <Comments />
+        {/* <Comments /> */}
       </ContextMenuTrigger>
 
       <ContextMenuContent className="right-menu-content">
